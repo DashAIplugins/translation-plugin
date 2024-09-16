@@ -1,0 +1,27 @@
+[project]
+name = "dashai_plugin_template"
+version = "0.0.1"
+
+dependencies = [
+  # add plugin dependencies here
+]
+
+authors = [
+  { name=},
+  { email=},
+]
+
+description = "DashAI Plugin description"
+readme = "README.md"
+requires-python = ">=3.8" # DashAI software needs python 3.8 or higher
+
+[project.entry-points.'dashai.plugins']
+task_name = 'dashai_plugin_template.task_class_template:ExampleTaskClass'
+model_name = 'dashai_plugin_template.model_class_template:ExampleModelClass'
+dataloader_name = 'dashai_plugin_template.dataloader_class_template:ExampleDataLoaderClass'
+metric_name = 'dashai_plugin_template.metric_class_template:ExampleMetricClass'
+# Add all the necessary entrypoint (one per DashAI component)
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
